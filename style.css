@@ -681,62 +681,6 @@ h3{
     color: black;
 }
 
-/*------- SOBRE UV --------*/
-
-#urban div.bannerinicio > img{
-    width: 100%;   
-    border-bottom: 10px solid #fcc83a;
-}
-#urban {
-    justify-content: center;
-
-}
-#urban .vision {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: start; 
-    margin: 70px;
-}
-.vision span{
-    font-weight: bold;
-}
-.textovision{
-    margin-top: 60px;
-    padding: 18px;
-}
-
-
-#urban .novision {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: start; 
-    margin: 70px;
-}
-.vision span{
-    font-weight: bold;
-}
-.notextovision{
-    margin-top: 60px;
-    padding: 18px;
-}
-
-
-
-
-#urban .vision {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: start; 
-    margin: 70px;
-}
-.vision span{
-    font-weight: bold;
-}
-.textovision{
-    margin-top: 60px;
-    padding: 18px;
-}
-
 
 
 
