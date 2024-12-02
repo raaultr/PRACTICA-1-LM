@@ -1,0 +1,742 @@
+@keyframes moverFrase {
+    0% {
+        transform: translateX(100%); /* Empieza a la derecha */
+    }
+    100% {
+        transform: translateX(-26%); /* Termina a la izquierda */
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+html, body {
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+header{
+    width: 100%;
+    background-color: #292929;
+    padding: 8px 0;
+}
+nav{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    width: 80%;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 61%;
+    align-items: center; 
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+nav ul a:hover{
+    color: #fcc83a;
+}
+.boton{
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease; /* Incluye 'transform' en las transiciones */
+}
+nav ul a.boton:hover{
+    border-color: #fcc83a;
+    background-color: rgba(238, 171, 0, 0.705);
+    color: white;
+    transform: scale(1.1);
+}
+.icon{
+    transition: transform 0.2s ease;
+}
+nav ul a.icon:hover{
+    transform: scale(1.1);
+}
+
+/* ------- INICIO --------*/
+
+.franja{
+    width: 100%;
+    background-color: #fcc83a;
+    color: black;
+    font-size: 24px;
+}
+.franja p{
+    animation: moverFrase 15s linear infinite; /* Aplica la animación */
+    font-family: fantasy;
+    font-size: 40px;
+}
+.franja div.banner{
+    background-color: white;
+}
+#inicio{
+    background-color: #f5f5f5;
+    height: 100%;   
+}
+#modelos {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.modelo {
+    position: relative;
+    width: 32%;
+    text-align: center;
+}
+.modelo img{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    transition: filter 0.2s ease;
+}
+.modelo:hover img{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    filter: brightness(50%);
+}
+.modelo:hover .texto{
+    border-color: #fcc83a;
+    background-color: rgba(238, 171, 0, 0.705);
+    color: white;
+    font-size: 27px;
+}
+.modelo .texto {
+    position: absolute;
+    bottom: 50px; /* Ajusta este valor según cuánto quieras que suba el texto */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 70%;
+    font-family: Sans-serif;
+    transition: font-size 0.2s ease, background-color 0.2s ease;
+}
+.modelo .texto:hover{
+    border-color: #fcc83a;
+    background-color: rgba(238, 171, 0, 0.705);
+    color: white;
+    font-size: 27px;
+}
+
+/* Sección de ofertas más buscadas */
+#ofbuscadas {
+    padding: 20px;
+    margin: 0 28px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 23px;
+}
+h2{
+    font-size: 40px;
+    margin: 10px 0 20px 0px;
+    color: #292929;
+    text-align: center;
+}
+#ofbuscadas > div {
+    display: flex;
+    justify-items: center;
+}
+#ofbuscadas article{
+    margin: 0 15px;
+}
+#ofbuscadas article div{
+    margin: 8px 0 0px 0;
+}
+.ofertas span{
+    padding: 5px;
+}
+.antes{
+    text-decoration: line-through;
+    color: #555;
+}
+.ahora{
+    font-weight: bold;
+    color: #DC143C;
+}
+
+/* Seccion del final */
+#final {
+    padding: 20px;
+    margin: 0 28px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 23px;
+}
+#final h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+#final > div {
+    display: flex;
+    justify-items: center;
+}
+#final article{
+    margin: 0 10px;
+    background-color: #292929;
+    padding: 8px;
+}
+#final p{
+   color: white;
+   font-size: 18px;
+   line-height: 1.8;
+   margin-top: 25px;
+   padding: 5px 20px 80px;
+}
+#final span{
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    font-family: se;
+}
+#final h3{
+    font-size: 23px;
+    margin: 25px 0 25px 0;
+}
+.desc > img{
+    margin-bottom: 15px;
+}
+#final a.enlace{
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+#final a.enlace:hover{
+    color: #292929;
+    background-color: white;
+    transition: background-color 0.2s;
+}
+#final .tiendas{
+    line-height: 1.7;
+    margin-top: 78px;
+}
+#final .fotomedio{
+    margin-top: 20px;
+}
+#final article a > img{
+    justify-content: space-between;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: #292929;
+    padding: 20px 0;
+    justify-content: center;
+    font-family: Gotham SSm A, Gotham SSm B, Arial, sans-serif;
+}
+footer div{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;  
+    line-height: 23px; 
+}
+footer ul li{
+    list-style: none;
+    font-size: 13px;
+}
+footer h3{
+    font-size: 14px;
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration-line: underline;
+}
+footer p{
+    color: white;
+    font-size: 13px;
+    margin: 18px 20px 0 20px; 
+    padding: 10px;
+    text-align: center;
+}
+
+/* ------- INICIAR SESION / REGISTARRME --------*/
+
+#inireg{
+    background-color: #f5f5f5;
+}
+section#iniciarses{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+}
+section#iniciarses input{
+    width: 100%;
+    padding: 13px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 6px 0 15px 0; 
+}
+
+div#iniciar , div#registr{
+    margin: 2%;
+    width: 30%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+}
+div#iniciar form , div#registr form{
+    margin: auto;
+    display: inline-block;
+}
+#iniciarses a{
+    color: white;
+    width: 99%;
+    margin-left: 4px;
+    display: inline-block;
+}
+#enviar {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    align-self: center;
+    max-width: 200px;
+    width: 32%;
+}
+#enviar:hover {
+    filter: brightness(80%);
+}
+.sep{
+    margin-top: 2%;
+}
+
+/*------- CONTACTO --------*/
+
+body#contacto{ /*Le pongo una id a body para que no se cambie nada en las otras paginas*/
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#textcontacto {
+    text-align: center;
+    padding: 10px;
+    max-width: 800px;
+    line-height: 1.8; /*Añado espacio entre parrafo y parrafo*/
+}
+h1{
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+    font-size: 2.5rem; 
+    color: #1a1a1a; 
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    text-align: center; 
+    margin: 20px 0;
+}
+#formcontacto {
+    width: 100%;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+#formcontacto h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#formcontacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px; /*Añado espacio entre inputs y textarea*/
+}
+#formcontacto div {
+    display: flex;
+    gap: 17px; /*Añado espacio entre inputs*/
+}
+#formcontacto input, #formcontacto textarea {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#formcontacto textarea {
+    height: 120px;
+    font-family: Arial, sans-serif;
+}
+
+/*------- ROPA --------*/
+
+#ropa{
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rop{
+    height: 245vh;
+}
+.rop div.ropas{
+    margin: 20px auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.rop article{
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+}
+article > span{
+    font-weight: bold;
+}
+.ropaimg{
+    transition: filter 0.2s ease;
+}
+.ropaimg:hover{
+    filter: brightness(50%);
+}
+.siguiente{
+    display: flex;
+    justify-content: end;
+    margin-right: 16%;
+}
+.siguiente a{
+    color: black;
+}
+
+/*------- COMPRAR --------*/
+
+#comprar{
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+#pago {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 55px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Resumen del pedido */
+#resumen {
+    flex: 1 1 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+#resumen h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+#resumen p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+#resumen span{
+    font-weight: bold;
+    font-size: 19px;
+}
+/* Formulario de pago */
+#formulario-pago {
+    flex: 2 1 300px;
+    padding: 20px;
+}
+#formulario-pago h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+#formulario-pago label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+#formulario-pago input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+#finalizar-compra {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#finalizar-compra:hover {
+    background-color: #0056b3;
+}
+
+/*------- LANZAMIENTOS --------*/
+
+#destacada .anuncio span{
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+    color: #1a1a1a; 
+    margin: 10px 0;
+}
+#destacada .anuncio{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 23px;
+    padding: 20px;
+}
+#destacada{
+    position: relative;
+    display: inline-block;
+}
+#destacada a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 20px;
+    position: absolute;
+    bottom: 90px; /* Baja el enlace más */
+    left: 16%; /* Mueve el enlace hacia la izquierda (mitad de la mitad) */
+    transition: transform 0.2s ease;
+}
+#destacada a:hover{
+    transform: scale(1.1);
+}
+.ropa{
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rop div.ropas{
+    margin: 20px auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.rop article{
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+}
+article span{
+    margin: 2px 0 2px 0;
+}
+.precio{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: bold;
+}
+.dia{
+    color: #DC143C;
+}
+
+/*------- GUIA TALLAS --------*/
+
+.guiatallas{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+table{
+    width: 100%;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+table th, table td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+table th{
+    background-color: #333;
+    color: #fff;
+}
+table td{
+    background-color: #f9f9f9;
+}
+
+/*------- PREGUNTAS FREQ --------*/
+
+#fq{
+    max-width: 800px;
+    margin: 23px auto;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.pregunta{
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #007BFF;
+}
+.pregunta p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    padding-left: 10px;
+    border-left: 4px solid #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*------- ENVIOS Y DEVOLUCIONES --------*/
+
+#envdev {
+    max-width: 800px;
+    margin: 23px auto;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+.envio, .devolucion {
+    margin-bottom: 30px;
+}
+.envio h3, .devolucion h3{
+    text-decoration: underline;
+}
+#envdev ul, ol {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: black;
+}
+#envdev li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+#envdev span{
+    font-weight: bold;
+}
+#envdev p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+}
+
+/*------- SOBRE UV --------*/
+
+#urban div.bannerinicio > img{
+    width: 100%;   
+    border-bottom: 10px solid #fcc83a;
+}
+#urban {
+    justify-content: center;
+
+}
+#urban .vision {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: start; 
+    margin: 70px;
+}
+.vision span{
+    font-weight: bold;
+}
+.textovision{
+    margin-top: 60px;
+    padding: 18px;
+}
+
+
+#urban .novision {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: start; 
+    margin: 70px;
+}
+.vision span{
+    font-weight: bold;
+}
+.notextovision{
+    margin-top: 60px;
+    padding: 18px;
+}
+
+
+
+
+#urban .vision {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: start; 
+    margin: 70px;
+}
+.vision span{
+    font-weight: bold;
+}
+.textovision{
+    margin-top: 60px;
+    padding: 18px;
+}
+
+
+
+
